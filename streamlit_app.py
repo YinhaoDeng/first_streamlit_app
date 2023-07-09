@@ -1,6 +1,7 @@
 import streamlit
 import pandas
 import requests
+import snowflake.connector
 
 my_fruit_list = pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt") #We want pandas to read our CSV file from that S3 bucket so we use a pandas function called read_csv  to pull the data into a dataframe we'll call my_fruit_list. 
 my_fruit_list = my_fruit_list.set_index('Fruit')
